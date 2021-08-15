@@ -1,0 +1,48 @@
+{
+  "name": "v-change-tags-order",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Changes the order of `<script>` and `<template>` tags in Vue single file components.",
+  "bin": {
+    "order-sfc": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint '{src,tests}/**/*.{js,ts,vue}'",
+    "lint:fix": "eslint --fix '{src,tests}/**/*.{js,ts,vue}'",
+    "format": "prettier '{src,tests}/**/*.{js,ts,vue}'",
+    "format:fix": "prettier --write '{src,tests}/**/*.{js,ts,vue}'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "cli-progress": "^3.9.0",
+    "colors": "^1.4.0",
+    "glob": "^7.1.7",
+    "yargs": "^17.1.1"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.9.2",
+    "@types/glob": "^7.1.4",
+    "@types/jest": "^27.0.1",
+    "@types/yargs": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.0",
+    "jest": "^27.0.6",
+    "lint-staged": ">=10",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.4",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "yarn lint:fix",
+      "yarn format:fix"
+    ]
+  }
+}
