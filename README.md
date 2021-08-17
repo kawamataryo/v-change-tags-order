@@ -19,12 +19,12 @@ npx v-change-tags-order
 npx v-change-tags-order --pattern 2
 ```
 
-## Options
+## Args
 
-|param|default|description|
+|args|default|description|
 |---|---|---|
-|`-p` or `--pattern`| 1 | In pattern 1, the `script` tag will be placed before the `template` tag; in pattern 2, the `script` tag will be placed after the `template` tag |
-|`-i` or `--ignore` | node_modules | What you want to exclude from changes, which can be set with the glob pattern. |
+|`-p` <br/> `--pattern`| 1 | In pattern 1, the `script` tag will be placed before the `template` tag; in pattern 2, the `script` tag will be placed after the `template` tag |
+|`-i` <br/> `--ignore` | node_modules | What you want to exclude from changes, which can be set with the glob pattern. |
 
 ## Recommend
 
