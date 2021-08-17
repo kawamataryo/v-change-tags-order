@@ -1,6 +1,6 @@
 {
   "name": "v-change-tags-order",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "description": "Changes the order of `<script>` and `<template>` tags in Vue single file components.",
