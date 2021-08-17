@@ -12,7 +12,7 @@ Changes the order of `<script>` and `<template>` tags in Vue single file compone
 
 ## Usage
 
-```
+```bash
 # In your Vue.js project
 # If you want to put the `script` tag before the `template` tag
 npx v-change-tags-order
