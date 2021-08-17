@@ -7,7 +7,7 @@
 
 Changes the order of `<script>` and `<template>` tags in Vue single file components.
 
-[![asciicast](https://asciinema.org/a/ObxJBi6dAxrSmvhSN5Qpcdo5s.svg)](https://asciinema.org/a/ObxJBi6dAxrSmvhSN5Qpcdo5s)
+![ezgif com-gif-maker (14)](https://user-images.githubusercontent.com/11070996/129812609-b74e74aa-7d32-4d3c-a392-1a2accf971b9.gif)
 
 
 ## Usage
