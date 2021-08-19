@@ -60,7 +60,7 @@
       "@semantic-release/github"
     ],
     "branches": [
-      "release"
+      "main"
     ]
   }
 }
