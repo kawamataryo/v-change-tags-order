@@ -78,7 +78,7 @@
       "@semantic-release/github",
       "@semantic-release/npm"
     ],
-    "branc  hes": [
+    "branches": [
       "main"
     ]
   }
