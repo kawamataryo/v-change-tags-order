@@ -23,6 +23,8 @@
     "yargs": "^17.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/cli-progress": "^3.9.2",
     "@types/glob": "^7.1.4",
     "@types/jest": "^27.0.1",
@@ -35,6 +37,7 @@
     "jest": "^27.0.6",
     "lint-staged": ">=10",
     "prettier": "^2.3.2",
+    "semantic-release": "^17.4.5",
     "ts-jest": "^27.0.4",
     "ts-node": "^10.2.0",
     "typescript": "^4.3.5"
@@ -43,6 +46,21 @@
     "*.{js,ts}": [
       "yarn lint:fix",
       "yarn format:fix"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ],
+    "branches": [
+      "release"
     ]
   }
 }
