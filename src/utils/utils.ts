@@ -1,7 +1,7 @@
 const TEMPLATE_TAG_NAME = "template";
 const SCRIPT_TAG_NAME = "script";
-const REPLACE_MAKER_TEMPLATE = "___REPLACE_MAKER__TEMPLATE";
-const REPLACE_MAKER_SCRIPT = "___REPLACE_MAKER__SCRIPT";
+const REPLACE_MARKER_TEMPLATE = "___REPLACE_MARKER__TEMPLATE";
+const REPLACE_MARKER_SCRIPT = "___REPLACE_MARKER__SCRIPT";
 
 const generateTagsRegex = (tagName: string) => {
   return new RegExp(`^<${tagName}.*>[\\s\\S]*^<\\/${tagName}>`, "m");
@@ -30,10 +30,10 @@ export const changeTheOrder = (text: string): string => {
   const scriptTag = getTag(text, scriptTagsRegex);
 
   return text
-    .replace(templateTagsRegex, REPLACE_MAKER_TEMPLATE)
-    .replace(scriptTagsRegex, REPLACE_MAKER_SCRIPT)
-    .replace(REPLACE_MAKER_TEMPLATE, scriptTag)
-    .replace(REPLACE_MAKER_SCRIPT, templateTag);
+    .replace(templateTagsRegex, REPLACE_MARKER_TEMPLATE)
+    .replace(scriptTagsRegex, REPLACE_MARKER_SCRIPT)
+    .replace(REPLACE_MARKER_TEMPLATE, scriptTag)
+    .replace(REPLACE_MARKER_SCRIPT, templateTag);
 };
 
 export const shouldChangeTheOrder = (
