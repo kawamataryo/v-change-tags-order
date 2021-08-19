@@ -24,13 +24,13 @@ export const getTag = (text: string, regex: RegExp): string => {
 };
 
 export const changeTheOrder = (text: string): string => {
-  const templatetagsRegex = generateTagsRegex(TEMPLATE_TAG_NAME);
+  const templateTagsRegex = generateTagsRegex(TEMPLATE_TAG_NAME);
   const scriptTagsRegex = generateTagsRegex(SCRIPT_TAG_NAME);
-  const templateTag = getTag(text, templatetagsRegex);
+  const templateTag = getTag(text, templateTagsRegex);
   const scriptTag = getTag(text, scriptTagsRegex);
 
   return text
-    .replace(templatetagsRegex, REPLACE_MARKER_TEMPLATE)
+    .replace(templateTagsRegex, REPLACE_MARKER_TEMPLATE)
     .replace(scriptTagsRegex, REPLACE_MARKER_SCRIPT)
     .replace(REPLACE_MARKER_TEMPLATE, scriptTag)
     .replace(REPLACE_MARKER_SCRIPT, templateTag);
