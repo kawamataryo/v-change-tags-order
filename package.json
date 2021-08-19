@@ -56,10 +56,29 @@
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/github"
+      ["@semantic-release/release-notes-generator", {
+        "preset": "angular",
+        "presetConfig": {
+          "types": [
+            {
+              "type": "chore",
+              "section": "Chore"
+            },
+            {
+              "type": "refactor",
+              "section": "Refactor"
+            },
+            {
+              "type": "perf",
+              "section": "Performance"
+            }
+          ]
+        }
+      }],
+      "@semantic-release/github",
+      "@semantic-release/npm"
     ],
-    "branches": [
+    "branc  hes": [
       "main"
     ]
   }
