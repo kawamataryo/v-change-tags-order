@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "cli-progress": "^3.9.0",
-    "colors": "^1.4.0",
+    "colors": "1.4.0",
     "glob": "^7.1.7",
     "yargs": "^17.1.1"
   },
@@ -56,25 +56,28 @@
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
-      ["@semantic-release/release-notes-generator", {
-        "preset": "angular",
-        "presetConfig": {
-          "types": [
-            {
-              "type": "chore",
-              "section": "Chore"
-            },
-            {
-              "type": "refactor",
-              "section": "Refactor"
-            },
-            {
-              "type": "perf",
-              "section": "Performance"
-            }
-          ]
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "angular",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "chore",
+                "section": "Chore"
+              },
+              {
+                "type": "refactor",
+                "section": "Refactor"
+              },
+              {
+                "type": "perf",
+                "section": "Performance"
+              }
+            ]
+          }
         }
-      }],
+      ],
       "@semantic-release/github",
       "@semantic-release/npm"
     ],
